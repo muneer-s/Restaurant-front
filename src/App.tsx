@@ -1,41 +1,17 @@
-import { Button, Stack } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import backgroundImage from '../assets/home-img.jpg'
-
+import Header from './components/Header';
+import backgroundImage from '../assets/home-img.jpg';
 
 function App() {
-  const navigate = useNavigate();
-
   return (
-
     <div
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
+      className="min-h-screen flex flex-col bg-cover bg-center text-center"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <p>Welcome to Home</p>
-
-      {/* Buttons for Navigation */}
-      <Stack direction="row" spacing={2}>
-        <Button variant="contained" color="primary" onClick={() => navigate("/viewlist")}>
-          View List
-        </Button>
-        <Button variant="contained" color="secondary" onClick={() => navigate("/createlist")}>
-          Create List
-        </Button>
-        <Button variant="contained" color="success" onClick={() => navigate("/editlist")}>
-          Edit List
-        </Button>
-      </Stack>
+      <Header />
+      <div className="flex-grow flex justify-center items-center">
+        <p className="text-2xl font-bold text-white">Welcome to Home</p>
+      </div>
     </div>
-
   );
 }
 

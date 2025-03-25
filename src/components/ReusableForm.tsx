@@ -1,80 +1,67 @@
-import { TextField, Button, Box, Typography } from "@mui/material";
-import { useState } from "react";
-import { createRestaurant } from "../api/api";
+// interface FormData {
+//   name: string;
+//   address: string;
+//   contact: string;
+// }
 
+// interface ReusableFormProps {
+//   formData: FormData;
+//   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+//   onSubmit: (e: React.FormEvent) => void;
+// }
 
-interface FormData {
-  name: string;
-  address: string;
-  contact: number;
-}
+// const ReusableForm: React.FC<ReusableFormProps> = ({ formData, setFormData, onSubmit }) => {
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
 
-interface ReusableFormProps {
-  onSubmit: (data: FormData) => void;
-}
+//   return (
+//     <form className="flex flex-col space-y-4" onSubmit={onSubmit}>
+//       {/* Name Input */}
+//       <div>
+//         <label className="block text-gray-600 font-medium">Name</label>
+//         <input
+//           type="text"
+//           name="name"
+//           value={formData.name}
+//           onChange={handleChange}
+//           className="w-full p-2 border border-gray-300 rounded"
+//           placeholder="Enter name"
+//         />
+//       </div>
 
-const ReusableForm: React.FC<ReusableFormProps> = ({ onSubmit }) => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    address: "",
-    contact: 0,
-  });
+//       {/* Address Input */}
+//       <div>
+//         <label className="block text-gray-600 font-medium">Address</label>
+//         <input
+//           type="text"
+//           name="address"
+//           value={formData.address}
+//           onChange={handleChange}
+//           className="w-full p-2 border border-gray-300 rounded"
+//           placeholder="Enter address"
+//         />
+//       </div>
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({...formData,[e.target.name]: e.target.value,});
-  };
+//       {/* Contact Input */}
+//       <div>
+//         <label className="block text-gray-600 font-medium">Contact</label>
+//         <input
+//           type="text"
+//           name="contact"
+//           value={formData.contact}
+//           onChange={handleChange}
+//           className="w-full p-2 border border-gray-300 rounded"
+//           placeholder="Enter 10-digit contact number"
+//         />
+//       </div>
 
-  const handleSubmit = async(e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      await createRestaurant(formData);
-      alert("Restaurant created successfully!");
-      setFormData({ name: "", address: "", contact: 0 });
-    } catch (error) {
-      console.error("Error creating restaurant:", error);
-    }
-  };
+//       {/* Submit Button */}
+//       <button type="submit" className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200">
+//         Submit
+//       </button>
+//     </form>
+//   );
+// };
 
-  return (
-    <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400, mx: "auto", mt: 4 }}>
-      <Typography variant="h5" mb={2}>Create List</Typography>
-
-      <TextField
-        fullWidth
-        label="Name"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        margin="normal"
-        required
-      />
-
-      <TextField
-        fullWidth
-        label="Address"
-        name="address"
-        value={formData.address}
-        onChange={handleChange}
-        margin="normal"
-        required
-      />
-
-      <TextField
-        fullWidth
-        label="Contact"
-        name="contact"
-        value={formData.contact}
-        onChange={handleChange}
-        margin="normal"
-        type="number"
-        required
-      />
-
-      <Button type="submit" variant="contained" color="primary" fullWidth sx={{ mt: 2 }}>
-        Submit
-      </Button>
-    </Box>
-  );
-};
-
-export default ReusableForm;
+// export default ReusableForm;
