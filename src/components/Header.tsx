@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav className="bg-gray-900 text-white p-4 shadow-md">
+    <nav className="bg-black text-white p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">My App</h1>
 
         {/* Navigation Links */}
         <ul className="hidden md:flex space-x-6">
+        <li>
+            <Link to="/" className="hover:text-blue-400">Home</Link>
+          </li>
           <li>
             <Link to="/viewlist" className="hover:text-blue-400">View List</Link>
           </li>
@@ -36,6 +39,9 @@ const Header = () => {
       {/* Mobile Dropdown */}
       <div id="mobile-menu" className="hidden md:hidden mt-2 bg-gray-800 p-4">
         <ul className="space-y-2 text-center">
+          <li>
+            <Link to="/" className="block hover:text-blue-400">Home</Link>
+          </li>
           <li>
             <Link to="/viewlist" className="block hover:text-blue-400">View List</Link>
           </li>

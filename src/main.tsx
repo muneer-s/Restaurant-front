@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App />} />
         <Route path="/createlist" element={<CreateList />} />
         <Route path="/viewlist" element={<ViewList />} />
-        <Route path="/editlist" element={<EditList />} />
+        <Route path="/editlist/:id" element={<EditList />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// create Axios instance
 const API  = axios.create({
   baseURL: "http://localhost:3000/api", 
   // baseURL: import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api", 
@@ -18,6 +17,11 @@ interface Restaurant {
 // Fetch all restaurants
 export const getRestaurants = async (): Promise<Restaurant[]> => {
   const response = await API.get<Restaurant[]>("/"); // Ensure the correct endpoint
+  return response.data;
+};
+
+export const getRestaurantById = async (id: number):Promise<Restaurant> => {
+  const response = await API.get<Restaurant>(`/${id}`);
   return response.data;
 };
 
