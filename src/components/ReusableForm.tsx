@@ -1,10 +1,12 @@
 import { TextField, Button, Box, Typography } from "@mui/material";
 import { useState } from "react";
+import { createRestaurant } from "../api/api";
+
 
 interface FormData {
   name: string;
   address: string;
-  contact: string;
+  contact: number;
 }
 
 interface ReusableFormProps {
@@ -15,19 +17,22 @@ const ReusableForm: React.FC<ReusableFormProps> = ({ onSubmit }) => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     address: "",
-    contact: "",
+    contact: 0,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({...formData,[e.target.name]: e.target.value,});
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(formData);
+    try {
+      await createRestaurant(formData);
+      alert("Restaurant created successfully!");
+      setFormData({ name: "", address: "", contact: 0 });
+    } catch (error) {
+      console.error("Error creating restaurant:", error);
+    }
   };
 
   return (

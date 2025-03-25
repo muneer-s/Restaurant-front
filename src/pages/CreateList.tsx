@@ -3,7 +3,7 @@ import Api from "../api/api";
 
 
 const CreateList = () => {
-    const handleFormSubmit = async (data: { name: string; address: string; contact: string }) => {
+    const handleFormSubmit = async (data: { name: string; address: string; contact: number }) => {
         try {
           const response = await Api.post("/lists", data); 
           console.log("Form Submitted Successfully:", response.data);
