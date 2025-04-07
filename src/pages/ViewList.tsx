@@ -54,6 +54,8 @@ const ViewList = () => {
   return (
     <>
       <Header />
+    <div style={{ backgroundColor: "black", minHeight: "100vh" }}>
+
       <Container sx={{ mt: 4 }}>
         <Grid container spacing={3}>
           {restaurants.map((restaurant) => (
@@ -107,6 +109,8 @@ const ViewList = () => {
           </Button>
         </DialogActions>
       </Dialog>
+
+      </div>
     </>
   );
 };

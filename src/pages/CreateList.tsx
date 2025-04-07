@@ -42,60 +42,69 @@ const CreateList = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-black p-4">
-      <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
-        <h2 className="text-2xl font-semibold text-gray-700 text-center mb-4">Create New List</h2>
-        <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
-          <div>
-            <label className="block text-gray-600 font-medium">Name</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded"
-              placeholder="Enter name"
-            />
-          </div>
+    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-black p-4 gap-8">
+      <div className="w-full md:w-1/2 flex justify-center">
+        <img
+          src="../../assets/3.jpg"
+          alt="Restaurant scene"
+          className="w-full max-w-md h-auto object-cover rounded-lg"
+        />
+      </div>
+      <div className="w-full md:w-1/2 flex justify-center">
+        <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+          <h2 className="text-2xl font-semibold text-gray-700 text-center mb-4">Create New List</h2>
+          <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
+            <div>
+              <label className="block text-gray-600 font-medium">Name</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full p-2 border border-gray-300 rounded"
+                placeholder="Enter name"
+              />
+            </div>
 
-          <div>
-            <label className="block text-gray-600 font-medium">Address</label>
-            <input
-              type="text"
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded"
-              placeholder="Enter address"
-            />
-          </div>
+            <div>
+              <label className="block text-gray-600 font-medium">Address</label>
+              <input
+                type="text"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                className="w-full p-2 border border-gray-300 rounded"
+                placeholder="Enter address"
+              />
+            </div>
 
-          <div>
-            <label className="block text-gray-600 font-medium">Contact</label>
-            <input
-              type="text"
-              name="contact"
-              value={formData.contact}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded"
-              placeholder="Enter 10-digit contact number"
-            />
-          </div>
+            <div>
+              <label className="block text-gray-600 font-medium">Contact</label>
+              <input
+                type="text"
+                name="contact"
+                value={formData.contact}
+                onChange={handleChange}
+                className="w-full p-2 border border-gray-300 rounded"
+                placeholder="Enter 10-digit contact number"
+              />
+            </div>
 
-          <button
-            type="submit"
-            className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200"
-          >
-            Submit
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate(-1)}
-            className="bg-red-500 text-white py-2 rounded hover:bg-red-600 transition duration-200"
-          >
-            Back
-          </button>
-        </form>
+            <button
+              type="submit"
+              className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              onClick={() => navigate('/')}
+              className="bg-red-500 text-white py-2 rounded hover:bg-red-600 transition duration-200"
+            >
+              Back
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

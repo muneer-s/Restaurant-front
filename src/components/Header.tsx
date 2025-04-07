@@ -4,11 +4,17 @@ const Header = () => {
   return (
     <nav className="bg-black text-white p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">My App</h1>
+      <div className="flex items-center">
+          <img
+            src="../../assets/l-4.png"
+            alt="Website Logo"
+            className="w-40 h-12 object-contain"
+          />
+        </div>
 
         {/* Navigation Links */}
         <ul className="hidden md:flex space-x-6">
-        <li>
+          <li>
             <Link to="/" className="hover:text-blue-400">Home</Link>
           </li>
           <li>
