@@ -2,6 +2,8 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import Api from "../api/api";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const CreateList = () => {
   const [formData, setFormData] = useState({ name: "", address: "", contact: "" });
@@ -42,6 +44,8 @@ const CreateList = () => {
   };
 
   return (
+    <>
+    <Header/>
     <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-black p-4 gap-8">
       <div className="w-full md:w-1/2 flex justify-center">
         <img
@@ -107,6 +111,9 @@ const CreateList = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
+    
   );
 };
 
