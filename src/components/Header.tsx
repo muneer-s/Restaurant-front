@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import l4 from "../../public/assets/l-4.png"
 
 const Header = () => {
   return (
@@ -6,7 +7,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
       <div className="flex items-center">
           <img
-            src="../../assets/l-4.png"
+            src={l4}
             alt="Website Logo"
             className="w-40 h-12 object-contain"
           />

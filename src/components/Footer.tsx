@@ -1,3 +1,4 @@
+import l4 from "../../public/assets/l-4.png"
 
 const Footer = () => {
 
@@ -17,7 +18,7 @@ const Footer = () => {
 
                     <div className="flex justify-center items-center mb-4">
                         <img
-                            src="../../assets/l-4.png"
+                            src={l4}
                             alt="Website Logo"
                             className="w-40 h-12 object-contain"
                         />

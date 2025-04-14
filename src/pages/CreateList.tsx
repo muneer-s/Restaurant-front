@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import Api from "../api/api";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import image3 from "../../public/assets/3.jpg"
+
 
 const CreateList = () => {
   const [formData, setFormData] = useState({ name: "", address: "", contact: "" });
@@ -49,7 +51,7 @@ const CreateList = () => {
     <div className="flex flex-col md:flex-row justify-center items-center min-h-screen bg-black p-4 gap-8">
       <div className="w-full md:w-1/2 flex justify-center">
         <img
-          src="../../assets/3.jpg"
+          src={image3}
           alt="Restaurant scene"
           className="w-full max-w-md h-auto object-cover rounded-lg"
         />

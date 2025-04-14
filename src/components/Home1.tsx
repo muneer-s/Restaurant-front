@@ -3,8 +3,6 @@ import homeImage from "../../public/assets/home-img.jpg"
 
 const Home1 = () => {
 
-
-
     return (
         <div className="bg-black flex flex-col md:flex-row min-h-screen">
             <div className="w-full md:w-1/2 flex items-center justify-center">

@@ -94,7 +94,7 @@ const ViewList = () => {
               sx={{
                 fontWeight: "bold",
                 backgroundColor: "#ccbc2f",
-                color: "#fff"  // Text color
+                color: "#fff" 
               }}
             />
           </Box>

@@ -1,3 +1,6 @@
+
+
+import image3 from "../../public/assets/3.jpg"
 const Home2 = () => {
     return (
         <div className="bg-black flex flex-col md:flex-row min-h-screen">
@@ -12,7 +15,7 @@ const Home2 = () => {
 
             <div className="w-full md:w-1/2 flex items-center justify-center">
                 <img
-                    src="../../assets/3.jpg"
+                    src={image3}
                     alt="Delicious meal from a local restaurant"
                     className="w-full h-auto object-cover rounded-3xl"
                 />
