@@ -3,7 +3,7 @@ const Home1 = () => {
         <div className="bg-black flex flex-col md:flex-row min-h-screen">
             <div className="w-full md:w-1/2 flex items-center justify-center">
                 <img
-                    src="../../assets/home-img.jpg"
+                    src="../../public/assets/home-img.jpg"
                     alt="Delicious meal from a local restaurant"
                     className="w-full h-auto object-cover rounded-3xl"
                 />
