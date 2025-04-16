@@ -25,6 +25,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 interface Restaurant {
   id: number;
@@ -93,7 +94,7 @@ const ViewList = () => {
               label={`${restaurants.length} Restaurants`}
               sx={{
                 fontWeight: "bold",
-                backgroundColor: "#ccbc2f",
+                backgroundColor: "#ffb300",
                 color: "#fff" 
               }}
             />
@@ -115,7 +116,7 @@ const ViewList = () => {
                     }}>
                       <Box sx={{
                         height: 12,
-                        backgroundColor: "#ccbc2f"
+                        backgroundColor: "#ffb300"
                       }} />
 
                       <CardContent sx={{ p: 3 }}>
@@ -231,6 +232,7 @@ const ViewList = () => {
           </DialogActions>
         </Dialog>
       </Box>
+      <Footer/>
     </>
   );
 };
