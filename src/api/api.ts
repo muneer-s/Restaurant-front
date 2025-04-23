@@ -16,7 +16,7 @@ interface Restaurant {
 
 // Fetch all restaurants
 export const getRestaurants = async (): Promise<Restaurant[]> => {
-  const response = await API.get<Restaurant[]>("/"); // Ensure the correct endpoint
+  const response = await API.get<Restaurant[]>("/");
   return response.data;
 };
 
